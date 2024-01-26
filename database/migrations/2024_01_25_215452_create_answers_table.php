@@ -13,17 +13,17 @@ return new class extends Migration
     {
         Schema::create('answers', function (Blueprint $table) {
             $table->id();
-            $table->string('answer');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')
                 ->references('id')
                 ->on('users')
                 ->onDelete('cascade');
-                $table->unsignedBigInteger('exam_one_id');
-            $table->foreign('exam_one_id')
+            $table->unsignedBigInteger('exam_id');
+            $table->foreign('exam_id')
                 ->references('id')
-                ->on('exam_ones')
+                ->on('exams')
                 ->onDelete('cascade');
+            $table->string('mark');
             $table->timestamps();
         });
     }
