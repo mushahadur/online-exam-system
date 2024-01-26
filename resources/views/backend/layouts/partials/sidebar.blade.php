@@ -14,14 +14,14 @@
                     
                 </li>
                 <li class="nav-item pcoded-menu-caption">
-                    <label>Product Pages</label>
+                    <label>Exam </label>
                 </li>
                 <li class="nav-item pcoded-hasmenu">
                     <a href="#!" class="nav-link "><span class="pcoded-micon"><i
-                                class="feather icon-box"></i></span><span class="pcoded-mtext">Product</span></a>
+                                class="feather icon-box"></i></span><span class="pcoded-mtext">Exam List</span></a>
                     <ul class="pcoded-submenu">
-                        <li><a href="#">Product Manage</a></li>
-                        <li><a href="#">Add Product</a></li>
+                        <li><a href="{{ route('english') }}">English</a></li>
+                        <li><a href="{{ route('math') }}">Math</a></li>
                     </ul>
                 </li>
 
