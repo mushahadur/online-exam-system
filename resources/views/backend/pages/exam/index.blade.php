@@ -28,12 +28,10 @@
             <div class="container">
                 <div class="row mx-3">
                     <div class="d-flex justify-content-end ">
-                        <button class="btn btn-success px-5" id="startButton">Start Your {{ $examName->name }} Exam</button>
-
-                        <!-- Fixed timer at the top or bottom of the page -->
-                        <div id="timer-container" style="border-color: red!important; padding:18px; background-color: #c1c42a; text-align: center;">
-                            <div id="timer" style="  font-size: 20px;
-                            color: rgb(141, 3, 3);"></div>
+                        <div style=" background-color: #e2cb1f;
+                        padding: 10px;
+                        text-align: center;" id="timer-container">
+                            <div id="timer"></div>
                         </div>
                     </div>
 
@@ -43,10 +41,10 @@
                             @csrf
                             <input type="hidden" name="exam_id" value="{{ $examName->id }}">
                             <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
-                            @foreach ($data as $item)
+                            @foreach ($data as $key =>  $item)
                                 <div class="col-12">
                                     <div class="d-flex justify-content-between">
-                                        <h5 class="mt-5">{{ $item->id }}. {{ $item->name }}</h5>
+                                        <h5 class="mt-5">{{$key + 1 }}. {{ $item->name }}</h5>
                                         <h5 class="mt-5">Mark - {{ $item->question_mark }}</h5>
                                     </div>
 
@@ -107,48 +105,43 @@
     </div>
 
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-    // Set the countdown time in seconds
-    let countdownTime = 600; // 10 minutes
+        document.addEventListener("DOMContentLoaded", function() {
+            // Set the countdown time in seconds
+            let countdownTime = 600; // 10 minutes
 
-    // Get elements
-    let startButton = document.getElementById('startButton');
-    let timerElement = document.getElementById('timer');
+            // Get elements
+            let timerElement = document.getElementById('timer');
 
-    // Function to update the timer display
-    function updateTimer() {
-        let minutes = Math.floor(countdownTime / 60);
-        let seconds = countdownTime % 60;
+            // Function to update the timer display
+            function updateTimer() {
+                let minutes = Math.floor(countdownTime / 60);
+                let seconds = countdownTime % 60;
 
-        timerElement.innerHTML = `Time Remaining: ${minutes}m ${seconds}s`;
+                timerElement.innerHTML = `Time Remaining: ${minutes}m ${seconds}s`;
 
-        if (countdownTime <= 0) {
-            timerElement.innerHTML = "Time's up!";
-            // Perform actions when the timer reaches zero (e.g., submit the exam)
-        } else {
-            countdownTime--;
-        }
-    }
-
-    // Function to start the countdown timer
-    function startTimer() {
-        // Hide the start button after clicking
-        startButton.style.display = 'none';
-
-        // Update the timer every second
-        let timerInterval = setInterval(function () {
-            updateTimer();
-
-            // Stop the timer when it reaches zero
-            if (countdownTime <= 0) {
-                clearInterval(timerInterval);
+                if (countdownTime <= 0) {
+                    timerElement.innerHTML = "Time's up!";
+                    // Perform actions when the timer reaches zero (e.g., submit the exam)
+                } else {
+                    countdownTime--;
+                }
             }
-        }, 1000);
-    }
 
-    // Event listener for the start button
-    startButton.addEventListener('click', startTimer);
-});
+            // Function to start the countdown timer
+            function startTimer() {
+                // Update the timer every second
+                let timerInterval = setInterval(function() {
+                    updateTimer();
 
+                    // Stop the timer when it reaches zero
+                    if (countdownTime <= 0) {
+                        clearInterval(timerInterval);
+                    }
+                }, 1000);
+            }
+
+            // Start the timer immediately on page load
+            startTimer();
+        });
     </script>
 @endsection

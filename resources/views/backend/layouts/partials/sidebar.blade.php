@@ -25,8 +25,14 @@
                     </ul>
                 </li>
 
-                <li class="nav-item pcoded-menu-caption">
+                <li class="nav-item pcoded-menu-caption pcoded-mtex">
                     <label>Pages</label>
+                </li>
+                <li class="nav-item pcoded-hasmenu pcoded-trigger">
+                    <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-layout"></i></span><span class="pcoded-mtext">Result</span></a>
+                    <ul class="pcoded-submenu" style="display: block;">
+                        <li><a href="{{ route('my.result', ['id' =>  Auth::user()->id]) }}" >Your Result</a></li>
+                    </ul>
                 </li>
 
             </ul>

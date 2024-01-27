@@ -36,7 +36,7 @@
                                     </div>
                                     <div class="col-sm-9">
                                         <h4>{{ $questions }} / {{ $data->mark }}</h4>
-                                        <h6>Congratulations ! for Your Achievements</h6>
+                                        <h6>Congratulations {{ Auth::user()->name }}! for Your Achievements</h6>
                                     </div>
                                 </div>
                             </div>
@@ -52,7 +52,7 @@
                                     </div>
                                     <div class="col-sm-9">
                                         <h4>Math - Exam</h4>
-                                        <a href=""><h6 class="text-primary">This is Your New Exam Link</h6></a>
+                                        <a href="{{ route('math') }}"><h6 class="text-primary">This is Your New Exam Link</h6></a>
                                     </div>
                                 </div>
                             </div>
