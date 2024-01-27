@@ -67,11 +67,11 @@ It is php 8.1.2 version
 
 4. After Clicking the Link User can see a quiz  
 
-                                    The quiz design may have a question and users can answer by 
-
-                                     Multiple choice  from  Radio box (user checks the correct answer)
-
-                                               Or maybe an input box to write the correct answer
+   -The quiz design may have a question and users can answer by 
+    
+   -Multiple choice  from  Radio box (user checks the correct answer)
+    
+   -Or maybe an input box to write the correct answer
 
 5. After submitting one quiz users see another Quiz.
 
