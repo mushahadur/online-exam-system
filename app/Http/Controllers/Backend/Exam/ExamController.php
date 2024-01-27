@@ -17,6 +17,17 @@ class ExamController extends Controller
         // dd($examName);
         return view('backend.pages.Exam.index', compact('data','examName'));
     }
+
+    public function math(){
+        $data = Question::where('exam_id', 2)->get();
+        // dd($data);
+
+        $examName = Exam::where('id', 2)->first();
+        // dd($examName);
+        return view('backend.pages.Exam.index', compact('data','examName'));
+    }
+
+
     public function submitExam(Request $request){
 
         $data = $request->all();
@@ -45,12 +56,29 @@ class ExamController extends Controller
             $examName = Exam::where('id', $request->exam_id)->first();
 
             $data = Answer::where('user_id', $request->user_id)->first();
-            // dd($data);
+           
             return view('backend.pages.Exam.result', compact('data','examName','questions'));
         }else{
             return "data not saved !";
         }
 
         
+    }
+
+    public function myResult($id){
+        $data = Answer::where('user_id',$id)->get();
+        // dd($data);
+        // $examName = [];
+        // foreach ($data as $item) {
+        //     $examName = Exam::where('id', $item->exam_id)->first();
+        //     // print_r($examName->name );
+        //     // echo '</br>';
+        //     }
+
+        //     dd( $examName);
+
+      
+        return view('backend.pages.result.index',compact('data'));
+
     }
 }

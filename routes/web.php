@@ -29,13 +29,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/english-exam', [ExamController::class, 'english'])->name('english');
     Route::get('/math-exam', [ExamController::class, 'math'])->name('math');
     Route::post('/exam-submit', [ExamController::class, 'submitExam'])->name('examSubmit');
+    Route::get('/result-shit/{id}', [ExamController::class, 'myResult'])->name('my.result');
 
 
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-
-
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
 require __DIR__.'/auth.php';
