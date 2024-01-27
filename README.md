@@ -80,8 +80,7 @@ It is php 8.1.2 version
 ### Work Procedure <a name="work_flow"></a>
 
 #### Front-End
-    - Gmail: superadmin@gmail.com
-    - Password: 12345678
-- Sign Up for other user 
-    - Gmail: must be unique
-    - Password: must be Eight Cherecters
+
+
+#### Bac![1](https://github.com/mushahadur/online-exam-system/assets/67184635/30b651f4-5e52-4eb2-8b09-8b83e0176141)
+kend
