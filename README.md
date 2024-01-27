@@ -1,66 +1,142 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+ <img width="100px" src="./public/frontend/img/1.png" align="center" alt="Logo" />
+ <h2 align="center">This is my Vista-Print-Project</h2>
+ <p align="center"></p>
 </p>
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Indexing
+- [About Project](#about)
+- [Use of Technology](#technology)
+- [Installing  Project](#installing)
+- [Objective  ](#objective)
+- [Key Features](#features)
+- [Work Procedure](#work_flow)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### About Project <a name="about"></a>
+VistaPrint has helped small business owners, entrepreneurs and dreamers create custom designs and professional marketing. Our online printing services are intended to help you find custom products you need – business cards, promotional marketing and more – to create a look you love.
 
-## Laravel Sponsors
+<hr>
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### Use of Technology <a name="technology"></a>
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+ | Field        | Technology                  |
+ | ------------ | ---------------------- |
+ | Frontend | JavaScript, JQuery, HTML5, CSS3, Bootstrap 5.x |
+ | Backend | PHP, Laravel, Ajax. |
+ | Database | PDO, MySQL.|
+ | DevOps | Version Control Tool: GitHub |
+ | Communication and Collaboration | Slack, Trello |
+ | Graphic Design | Canva, Online Tools |
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
+<br>
+<br>
+<hr>
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Installing Project <a name="installing"></a>
+It is php 8.1.2 version
+- git clone
+- composer install
+- php artisan key:generate
+- Setup .env file with Database
+- php artisan migrate:fresh --seed
+- npm install
+- npm run dev
+- php artisan serve
+- if Login to Admin Panel ->Gmail:superadmin@gmail.com || Password:12345678
 
-## Security Vulnerabilities
+<hr>
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### Objective Project <a name="objective"></a>
+ Create an Vista Print Project application using PHP Laravel that allows users to browse, search, and purchase images. The application should showcase OOP principles, utilize Laravel's features, implement RESTful APIs, and demonstrate the use of middleware for authentication and authorization.
 
-## License
+<hr>
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Key Features <a name="features"></a>
+1. User Registration and Authentication: 
+    - Users can register, login, and manage their profiles. 
+    - Implement middleware for user authentication and authorization to ensure secure access to certain features.
+<br>
+<p align="center">
+<h3>This is User Table</h3>
+
+
+| SI No   | Name    |    Email              | Role      | Status      | Action       |
+| ------- | --------| --------------------- | --------------| ------ | -------------|
+| 01 | Super Admin  | superadmin@gmail.com  | superadmin| Active     | ............ |
+| 02 |  Admin  | admin@gmail.com  | admin| Deactive   |Edit   Delete  |
+| 03 | Pulock  | Pulock@gmail.com  | oparetor| Active  |Edit   Delete   |
+| 04 | Mushahedur  | Mushahedur@gmail.com  | Manager| Status     |Edit   Delete   |
+
+
+</p>
+
+2. Create Category: 
+    - Category can show navbar . 
+    - Category Create , Read, Update , delete. and also status manage by admin.
+
+<br>
+
+User can create a category and also manages category tabel.
+
+<p align="center">
+<h3>This is Category Table</h3>
+
+
+| SI No   | Category Name    | Status                 | Action       |
+| ------- | -----------------| --------------------- | --------------| 
+| 01 | Bussiness Card  |  is_Active     | Edit   Delete |
+| 02 |  Pen    | is_Active     |Edit   Delete  |
+| 03 | Cup   | is_Active     |Edit   Delete   |
+| 04 | Phone Cover  |  is_Active |Edit   Delete   |
+
+
+</p>
+
+
+3. Several Types of Image: 
+    - Create a database of Vista-Print with attributes such as title, subtitle, category, and Several images. 
+    - Implement a RESTful API 
+    - information (GET request) and allow administrators to add, update, or delete  (POST, PUT, DELETE requests).
+
+<p align="center">
+<h3 >This is Post Table</h3>
+
+
+| SI No   | Title    |    Sub Title | Tag |    Slider Images   | Thumbnail | Status | Action       |
+| ------- | --------| ---------- | -------| ------------------ | ----------|------- | -------------|
+| 01 | Post Title 1  | Post Sub Title 1  | Post Tag 1 | S_image 1  | Thumbnail 1 | Active  | Edit   Delete |
+| 02 | Post Title 2  | Post Sub Title 2  | Post Tag 2 | S_image 2  | Thumbnail 2 | Deactive  | Edit   Delete |
+| 03 | Post Title 3  | Post Sub Title 3  | Post Tag 3 | S_image 3  | Thumbnail 3 | Active  | Edit   Delete |
+
+
+</p>
+
+
+ 4. User Roles: 
+    - Define user roles such as "User" and "Administrator." 
+    - Admins have additional privileges like managing Image and user accounts.
+
+
+### Work Procedure <a name="work_flow"></a>
+
+- Login as a super admin 
+    - Gmail: superadmin@gmail.com
+    - Password: 12345678
+- Sign Up for other user 
+    - Gmail: must be unique
+    - Password: must be Eight Cherecters

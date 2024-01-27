@@ -24,9 +24,26 @@ Admin Dashboard
         <!-- [ breadcrumb ] end -->
         <!-- [ Main Content ] start -->
         <div class="row">
-        
-       
-            <!-- Latest Customers end -->
+           
+              
+                <!-- widget-success-card start -->
+               
+            <div class="col-md-6 mx-auto">
+              
+                <!-- widget-success-card start -->
+                <div class="card ">
+                    <div class="row-table">
+                        <div class="col-md-6 card-body">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div class="col-sm-9">
+                            <h4>English - Exam</h4>
+                            <a href="{{ route('english') }}"><h6 class="text-primary">This is Your New Exam Link</h6></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- widget-success-card end -->
+            </div>
         </div>
         <!-- [ Main Content ] end -->
     </div>

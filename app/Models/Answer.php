@@ -9,8 +9,8 @@ class Answer extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'question_id',
-        'answer',
-        'user_id'
+        'mark', 
+        'user_id', 
+        'exam_id'
     ];
 }

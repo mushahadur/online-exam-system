@@ -14,19 +14,25 @@
                     
                 </li>
                 <li class="nav-item pcoded-menu-caption">
-                    <label>Product Pages</label>
+                    <label>Exam </label>
                 </li>
                 <li class="nav-item pcoded-hasmenu">
                     <a href="#!" class="nav-link "><span class="pcoded-micon"><i
-                                class="feather icon-box"></i></span><span class="pcoded-mtext">Product</span></a>
+                                class="feather icon-box"></i></span><span class="pcoded-mtext">Exam List</span></a>
                     <ul class="pcoded-submenu">
-                        <li><a href="#">Product Manage</a></li>
-                        <li><a href="#">Add Product</a></li>
+                        <li><a href="{{ route('english') }}">English</a></li>
+                        <li><a href="{{ route('math') }}">Math</a></li>
                     </ul>
                 </li>
 
-                <li class="nav-item pcoded-menu-caption">
+                <li class="nav-item pcoded-menu-caption pcoded-mtex">
                     <label>Pages</label>
+                </li>
+                <li class="nav-item pcoded-hasmenu pcoded-trigger">
+                    <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-layout"></i></span><span class="pcoded-mtext">Result</span></a>
+                    <ul class="pcoded-submenu" style="display: block;">
+                        <li><a href="{{ route('my.result', ['id' =>  Auth::user()->id]) }}" >Your Result</a></li>
+                    </ul>
                 </li>
 
             </ul>
